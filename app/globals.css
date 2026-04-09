@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Scripted AV palette — warm, clean, modern with a pop */
+  --color-cream: #f5f0e8;
+  --color-cream-light: #faf7f2;
+  --color-warm-white: #fefcf9;
+  --color-charcoal: #1a1917;
+  --color-charcoal-light: #2a2926;
+  --color-warm-gray: #8a8580;
+  --color-warm-gray-light: #b5b0aa;
+  --color-blue-deep: #1a3a5c;
+  --color-blue-accent: #2c5f8a;
+  --color-blue-pop: #3d7ab8;
+  --color-brass: #c4a265;
+  --color-brass-light: #d4b87a;
+  --color-brass-muted: #a8905e;
+  --color-copper: #b87333;
+
+  --font-sans: "Inter Tight", "Inter Tight Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument), "Georgia", serif;
+  --font-heading: var(--font-instrument), "Georgia", serif;
+
+  --radius: 0.625rem;
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+:root {
+  --background: #f5f0e8;
+  --foreground: #1a1917;
+}
+
+@layer base {
+  * {
+    @apply border-charcoal/8;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+  }
+}
