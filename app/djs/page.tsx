@@ -160,7 +160,7 @@ function LeadDJ() {
             />
 
             <p className="mt-5 text-sm text-cream/50 leading-relaxed font-light">
-              Over a decade behind the decks across Toronto and beyond. From The Chainsmokers&apos; official Grammy celebration in LA to intimate New Year&apos;s Eve sets — Conor has defined the role of a live DJ, performer, and tastemaker on the scene.
+              Over a decade behind the decks across Toronto and beyond. From The Chainsmokers&apos; official Grammy celebration in LA to intimate New Year&apos;s Eve sets — Conor has defined the role of a live DJ, performer, and tastemaker.
             </p>
 
             <div className="mt-8 space-y-5">
