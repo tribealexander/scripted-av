@@ -339,23 +339,22 @@ function EventTypes() {
   ];
 
   return (
-    <section className="bg-cream px-6 sm:px-10 py-20 sm:py-28">
+    <section className="bg-charcoal px-6 sm:px-10 py-20 sm:py-28">
       <div className="max-w-6xl mx-auto">
-        <p className="text-xs tracking-[3px] uppercase text-warm-gray mb-12 sm:mb-16">Events we play</p>
+        <p className="text-xs tracking-[3px] uppercase text-cream/30 mb-12 sm:mb-16">Events we play</p>
 
-        <div className="space-y-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {events.map((event) => (
-            <div
+            <Tilt
               key={event.title}
-              className="group grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 md:gap-16 py-8 sm:py-10 border-t border-charcoal/10 last:border-b transition-colors duration-300 hover:border-charcoal/20"
+              rotationFactor={4}
+              springOptions={{ stiffness: 200, damping: 25 }}
             >
-              <h3 className="font-serif text-2xl sm:text-3xl text-charcoal tracking-tight group-hover:text-brass transition-colors duration-300">
-                {event.title}
-              </h3>
-              <p className="text-base text-warm-gray leading-relaxed font-light max-w-xl">
-                {event.description}
-              </p>
-            </div>
+              <div className="group bg-cream/5 border border-cream/8 rounded-sm p-7 sm:p-8 h-full transition-all duration-300 hover:bg-cream/10 hover:border-brass/30">
+                <h3 className="font-serif text-xl sm:text-2xl text-cream tracking-tight mb-3 transition-colors duration-300 group-hover:text-brass">{event.title}</h3>
+                <p className="text-sm text-cream/35 leading-relaxed font-light">{event.description}</p>
+              </div>
+            </Tilt>
           ))}
         </div>
       </div>
