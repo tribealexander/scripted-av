@@ -124,7 +124,7 @@ function LeadDJ() {
           {/* Bio */}
           <div className="flex flex-col justify-center">
             <TextReveal
-              text="From private parties for Shawn Mendes and Lady Gaga to NHL superstar Connor McDavid's wedding and Beyoncé's Renaissance album release — Conor Cutz has become one of the most sought-after open-format DJs in live events."
+              text="Private events for Shawn Mendes, Lady Gaga, and U2. Connor McDavid's wedding. Beyoncé's Renaissance release. Conor Cutz is one of the most in-demand open-format DJs in the industry."
               as="p"
               staggerDelay={0.02}
               duration={0.4}
