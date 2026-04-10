@@ -21,8 +21,8 @@ export default function DJs() {
         <Intro />
         <LeadDJ />
         <Roster />
-        <WhatYouGet />
         <Numbers />
+        <WhatYouGet />
         <EventTypes />
         <CTA />
       </main>
@@ -365,7 +365,7 @@ function EventTypes() {
 /* ─── CTA ─── */
 function CTA() {
   return (
-    <section id="contact" className="bg-charcoal px-6 sm:px-10 py-28 sm:py-40">
+    <section id="contact" className="bg-cream px-6 sm:px-10 py-28 sm:py-40">
       <div className="max-w-3xl mx-auto">
         <TextReveal
           text="Your event deserves better than a playlist."
@@ -373,16 +373,16 @@ function CTA() {
           splitBy="words"
           staggerDelay={0.06}
           duration={0.5}
-          className="font-serif text-4xl sm:text-5xl md:text-6xl text-cream tracking-tight leading-[1.1]"
+          className="font-serif text-4xl sm:text-5xl md:text-6xl text-charcoal tracking-tight leading-[1.1]"
         />
-        <p className="mt-6 text-lg text-cream/40 font-light max-w-xl leading-relaxed">
+        <p className="mt-6 text-lg text-warm-gray font-light max-w-xl leading-relaxed">
           Tell us about your event — the date, the venue, the vibe you&apos;re after. We&apos;ll match you with the right DJ and handle the rest.
         </p>
         <div className="mt-12">
           <Magnetic strength={0.3}>
             <a
               href="mailto:hello@scriptedav.com"
-              className="group inline-flex items-center gap-4 font-serif text-2xl sm:text-3xl text-cream transition-colors duration-300 hover:text-brass"
+              className="group inline-flex items-center gap-4 font-serif text-2xl sm:text-3xl text-charcoal transition-colors duration-300 hover:text-brass"
             >
               hello@scriptedav.com
               <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2" strokeWidth={1.5} />
