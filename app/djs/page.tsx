@@ -115,30 +115,44 @@ function LeadDJ() {
           {/* Bio */}
           <div className="flex flex-col justify-center">
             <TextReveal
-              text="15 years behind the decks. 2,000+ events. From intimate 50-person dinners to 500-person galas — Conor reads the room before the first track drops."
+              text="From private parties for Shawn Mendes and Lady Gaga to NHL superstar Connor McDavid's wedding and Beyoncé's Renaissance album release — Conor Cutz has become one of the most sought-after open-format DJs in live events."
               as="p"
               staggerDelay={0.02}
               duration={0.4}
               className="font-serif text-2xl sm:text-3xl text-cream leading-[1.4] tracking-tight"
             />
 
+            <p className="mt-8 text-base text-cream/50 leading-relaxed font-light">
+              Over a decade behind the decks across Toronto and beyond. From The Chainsmokers&apos; official Grammy celebration in LA to intimate New Year&apos;s Eve sets — Conor has defined the role of a live DJ, performer, and tastemaker on the scene.
+            </p>
+
             <div className="mt-12 space-y-8">
               <div>
-                <p className="text-xs tracking-[3px] uppercase text-brass mb-3">Specialties</p>
+                <p className="text-xs tracking-[3px] uppercase text-brass mb-3">Notable</p>
                 <p className="text-base text-cream/50 leading-relaxed font-light">
-                  Weddings, corporate galas, private events, brand launches, cocktail hours, late-night sets
+                  Connor McDavid&apos;s wedding &middot; Beyoncé&apos;s Renaissance release party &middot; The Chainsmokers&apos; Grammy celebration &middot; Shawn Mendes&apos; private NYE &middot; iHeartRadio Future Stars (Flight School)
                 </p>
+              </div>
+              <div>
+                <p className="text-xs tracking-[3px] uppercase text-brass mb-3">Clients</p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-2 text-sm text-cream/40 font-light">
+                  {[
+                    "Louis Vuitton", "Red Bull", "Cadillac", "Porsche",
+                    "Adidas", "Canada Goose", "Samsung", "Spotify",
+                    "Air Canada", "H&M", "Heineken", "Live Nation",
+                    "Beats by Dre", "Hewlett-Packard", "Soho House",
+                    "TD Bank", "Rogers", "General Motors",
+                    "TIFF", "Pride Toronto", "SickKids Hospital",
+                    "The Four Seasons",
+                  ].map((client) => (
+                    <span key={client}>{client}</span>
+                  ))}
+                </div>
               </div>
               <div>
                 <p className="text-xs tracking-[3px] uppercase text-brass mb-3">Sound</p>
                 <p className="text-base text-cream/50 leading-relaxed font-light">
-                  Open format — R&B, house, hip-hop, disco, soul, top 40. Every set is built for the audience in the room, not a generic formula.
-                </p>
-              </div>
-              <div>
-                <p className="text-xs tracking-[3px] uppercase text-brass mb-3">Approach</p>
-                <p className="text-base text-cream/50 leading-relaxed font-light">
-                  Pre-event consultation to understand the vibe, the timeline, and the non-negotiables. On the night, it&apos;s instinct — reading energy, building momentum, making every transition feel intentional.
+                  Open format — R&amp;B, house, hip-hop, disco, soul, top 40. Every set is built for the audience in the room, not a generic formula.
                 </p>
               </div>
             </div>
