@@ -178,17 +178,14 @@ function Roster() {
     { name: "Akil", specialty: "R&B / Soul" },
     { name: "Sean", specialty: "House / Disco" },
     { name: "Nicolina", specialty: "Top 40 / Pop" },
-    { name: "TBD", specialty: "Hip-Hop / Trap" },
-    { name: "TBD", specialty: "Latin / Reggaeton" },
-    { name: "TBD", specialty: "Lounge / Deep House" },
   ];
 
   return (
     <section id="roster" className="bg-cream px-6 sm:px-10 py-28 sm:py-40">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <p className="text-xs tracking-[3px] uppercase text-warm-gray mb-16 sm:mb-24">Our roster</p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-3 gap-6 sm:gap-8">
           {roster.map((dj, i) => (
             <Tilt
               key={`${dj.name}-${i}`}
@@ -196,7 +193,7 @@ function Roster() {
               springOptions={{ stiffness: 200, damping: 25 }}
               className="group"
             >
-              <div className="relative aspect-[3/4] overflow-hidden rounded-sm mb-5">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-sm mb-4">
                 {/* Placeholder bg */}
                 <div className="absolute inset-0 bg-charcoal/10" />
                 {/* Film grain texture */}
@@ -208,11 +205,11 @@ function Roster() {
                   }}
                 />
                 {/* Gradient + number */}
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent flex items-end p-6">
-                  <span className="font-serif text-5xl text-cream/10">{String(i + 1).padStart(2, "0")}</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent flex items-end p-5">
+                  <span className="font-serif text-4xl text-cream/10">{String(i + 1).padStart(2, "0")}</span>
                 </div>
               </div>
-              <h3 className="font-serif text-2xl text-charcoal tracking-tight">{dj.name}</h3>
+              <h3 className="font-serif text-xl text-charcoal tracking-tight">{dj.name}</h3>
               <p className="text-sm text-warm-gray mt-1 font-light">{dj.specialty}</p>
             </Tilt>
           ))}
