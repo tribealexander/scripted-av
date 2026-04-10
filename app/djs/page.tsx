@@ -175,9 +175,9 @@ function LeadDJ() {
 /* ─── Roster ─── */
 function Roster() {
   const roster = [
-    { name: "Akil", specialty: "R&B / Soul" },
-    { name: "Sean", specialty: "House / Disco" },
-    { name: "Nicolina", specialty: "Top 40 / Pop" },
+    { name: "Akil", specialty: "R&B / Soul", image: "https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=600&h=750&fit=crop" },
+    { name: "Sean", specialty: "House / Disco", image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=750&fit=crop" },
+    { name: "Nicolina", specialty: "Top 40 / Pop", image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&h=750&fit=crop" },
   ];
 
   return (
@@ -194,8 +194,13 @@ function Roster() {
               className="group"
             >
               <div className="relative aspect-[4/5] overflow-hidden rounded-sm mb-4">
-                {/* Placeholder bg */}
-                <div className="absolute inset-0 bg-charcoal/10" />
+                <Image
+                  src={dj.image}
+                  alt={dj.name}
+                  fill
+                  className="object-cover grayscale"
+                  sizes="(max-width: 768px) 33vw, 300px"
+                />
                 {/* Film grain texture */}
                 <div
                   className="absolute inset-0 opacity-40 mix-blend-multiply pointer-events-none"
