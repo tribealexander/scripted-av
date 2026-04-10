@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { TextReveal } from "@/components/unlumen-ui/text-reveal";
 import { Tilt } from "@/components/unlumen-ui/tilt";
@@ -94,10 +95,17 @@ function LeadDJ() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
           {/* Photo */}
           <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
-            <div className="absolute inset-0 bg-charcoal-light" />
+            <Image
+              src="/conor.avif"
+              alt="Conor Cutz"
+              fill
+              className="object-cover grayscale"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
+            />
             {/* Film grain overlay */}
             <div
-              className="absolute inset-0 opacity-30 mix-blend-overlay pointer-events-none"
+              className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none"
               style={{
                 backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E")`,
                 backgroundSize: "128px 128px",
