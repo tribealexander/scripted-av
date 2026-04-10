@@ -21,30 +21,6 @@ export function Nav({ mode = "av" }: { mode?: "av" | "djs" }) {
         <span className="sm:hidden">{mode === "av" ? "Scripted / AV" : "Scripted / Talent"}</span>
       </a>
 
-      {/* Pill toggle */}
-      <div className="flex items-center bg-cream/8 rounded-full p-0.5">
-        <a
-          href="/"
-          className={`px-4 py-1.5 rounded-full text-[11px] tracking-[2px] uppercase transition-all duration-300 ${
-            mode === "av"
-              ? "bg-cream text-charcoal"
-              : "text-cream/40 hover:text-cream/70"
-          }`}
-        >
-          AV
-        </a>
-        <a
-          href="/djs"
-          className={`px-4 py-1.5 rounded-full text-[11px] tracking-[2px] uppercase transition-all duration-300 ${
-            mode === "djs"
-              ? "bg-cream text-charcoal"
-              : "text-cream/40 hover:text-cream/70"
-          }`}
-        >
-          Talent
-        </a>
-      </div>
-
       {/* Nav links — contextual */}
       <div className="hidden md:flex items-center gap-8 text-xs tracking-[2px] uppercase text-cream/40">
         {mode === "av" ? (
@@ -62,14 +38,40 @@ export function Nav({ mode = "av" }: { mode?: "av" | "djs" }) {
         )}
       </div>
 
-      <Magnetic strength={0.25}>
-        <a
-          href={mode === "av" ? "/#contact" : "/djs#contact"}
-          className="text-xs tracking-[2px] uppercase text-cream/60 transition-colors duration-300 hover:text-cream"
-        >
-          Inquire
-        </a>
-      </Magnetic>
+      <div className="flex items-center gap-5">
+        <Magnetic strength={0.25}>
+          <a
+            href={mode === "av" ? "/#contact" : "/djs#contact"}
+            className="text-xs tracking-[2px] uppercase text-cream/60 transition-colors duration-300 hover:text-cream"
+          >
+            Inquire
+          </a>
+        </Magnetic>
+
+        {/* Pill toggle */}
+        <div className="flex items-center bg-cream/8 rounded-full p-0.5">
+          <a
+            href="/"
+            className={`px-3 py-1 rounded-full text-[10px] tracking-[2px] uppercase transition-all duration-300 ${
+              mode === "av"
+                ? "bg-cream text-charcoal"
+                : "text-cream/40 hover:text-cream/70"
+            }`}
+          >
+            AV
+          </a>
+          <a
+            href="/djs"
+            className={`px-3 py-1 rounded-full text-[10px] tracking-[2px] uppercase transition-all duration-300 ${
+              mode === "djs"
+                ? "bg-cream text-charcoal"
+                : "text-cream/40 hover:text-cream/70"
+            }`}
+          >
+            Talent
+          </a>
+        </div>
+      </div>
     </nav>
   );
 }
