@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { TextReveal } from "@/components/unlumen-ui/text-reveal";
 import { Tilt } from "@/components/unlumen-ui/tilt";
@@ -172,16 +173,19 @@ function Work() {
       title: "The Burroughes",
       type: "Brand Activation",
       year: "2025",
+      image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=800&fit=crop",
     },
     {
       title: "Evergreen Brick Works",
       type: "Conference",
       year: "2025",
+      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=800&fit=crop",
     },
     {
       title: "Arcadian Court",
       type: "Permanent Installation",
       year: "2024",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=800&fit=crop",
     },
   ];
 
@@ -198,7 +202,14 @@ function Work() {
               springOptions={{ stiffness: 200, damping: 25 }}
               className="group cursor-pointer"
             >
-              <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-charcoal/5 mb-6">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-sm mb-6">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover grayscale"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
                 <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/20 to-charcoal/70 flex items-end p-6">
                   <span className="font-serif text-6xl text-cream/10">{String(i + 1).padStart(2, "0")}</span>
                 </div>
