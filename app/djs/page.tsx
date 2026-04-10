@@ -17,6 +17,7 @@ export default function DJs() {
         <Hero />
         <Intro />
         <LeadDJ />
+        <Roster />
         <WhatYouGet />
         <Numbers />
         <EventTypes />
@@ -165,6 +166,56 @@ function LeadDJ() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── Roster ─── */
+function Roster() {
+  const roster = [
+    { name: "Akil", specialty: "R&B / Soul" },
+    { name: "Sean", specialty: "House / Disco" },
+    { name: "Nicolina", specialty: "Top 40 / Pop" },
+    { name: "TBD", specialty: "Hip-Hop / Trap" },
+    { name: "TBD", specialty: "Latin / Reggaeton" },
+    { name: "TBD", specialty: "Lounge / Deep House" },
+  ];
+
+  return (
+    <section className="bg-cream px-6 sm:px-10 py-28 sm:py-40">
+      <div className="max-w-6xl mx-auto">
+        <p className="text-xs tracking-[3px] uppercase text-warm-gray mb-16 sm:mb-24">Our roster</p>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+          {roster.map((dj, i) => (
+            <Tilt
+              key={`${dj.name}-${i}`}
+              rotationFactor={4}
+              springOptions={{ stiffness: 200, damping: 25 }}
+              className="group"
+            >
+              <div className="relative aspect-[3/4] overflow-hidden rounded-sm mb-5">
+                {/* Placeholder bg */}
+                <div className="absolute inset-0 bg-charcoal/10" />
+                {/* Film grain texture */}
+                <div
+                  className="absolute inset-0 opacity-40 mix-blend-multiply pointer-events-none"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E")`,
+                    backgroundSize: "128px 128px",
+                  }}
+                />
+                {/* Gradient + number */}
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent flex items-end p-6">
+                  <span className="font-serif text-5xl text-cream/10">{String(i + 1).padStart(2, "0")}</span>
+                </div>
+              </div>
+              <h3 className="font-serif text-2xl text-charcoal tracking-tight">{dj.name}</h3>
+              <p className="text-sm text-warm-gray mt-1 font-light">{dj.specialty}</p>
+            </Tilt>
+          ))}
         </div>
       </div>
     </section>
