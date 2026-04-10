@@ -107,13 +107,13 @@ function Intro() {
 /* ─── Lead DJ ─── */
 function LeadDJ() {
   return (
-    <section className="bg-charcoal px-6 sm:px-10 py-28 sm:py-40">
+    <section className="bg-charcoal px-6 sm:px-10 py-20 sm:py-28">
       <div className="max-w-6xl mx-auto">
-        <p className="text-xs tracking-[3px] uppercase text-cream/30 mb-16 sm:mb-24">Lead talent</p>
+        <p className="text-xs tracking-[3px] uppercase text-cream/30 mb-12 sm:mb-16">Lead talent</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
           {/* Photo */}
-          <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
             <Image
               src="/conor.avif"
               alt="Conor Cutz"
@@ -156,40 +156,30 @@ function LeadDJ() {
               as="p"
               staggerDelay={0.02}
               duration={0.4}
-              className="font-serif text-2xl sm:text-3xl text-cream leading-[1.4] tracking-tight"
+              className="font-serif text-xl sm:text-2xl text-cream leading-[1.4] tracking-tight"
             />
 
-            <p className="mt-8 text-base text-cream/50 leading-relaxed font-light">
+            <p className="mt-5 text-sm text-cream/50 leading-relaxed font-light">
               Over a decade behind the decks across Toronto and beyond. From The Chainsmokers&apos; official Grammy celebration in LA to intimate New Year&apos;s Eve sets — Conor has defined the role of a live DJ, performer, and tastemaker on the scene.
             </p>
 
-            <div className="mt-12 space-y-8">
+            <div className="mt-8 space-y-5">
               <div>
-                <p className="text-xs tracking-[3px] uppercase text-brass mb-3">Notable</p>
-                <p className="text-base text-cream/50 leading-relaxed font-light">
-                  Connor McDavid&apos;s wedding &middot; Beyoncé&apos;s Renaissance release party &middot; The Chainsmokers&apos; Grammy celebration &middot; Shawn Mendes&apos; private NYE &middot; iHeartRadio Future Stars (Flight School)
+                <p className="text-xs tracking-[3px] uppercase text-brass mb-2">Notable</p>
+                <p className="text-sm text-cream/50 leading-relaxed font-light">
+                  McDavid&apos;s wedding &middot; Beyoncé&apos;s Renaissance party &middot; Chainsmokers&apos; Grammy &middot; Shawn Mendes&apos; NYE &middot; iHeartRadio Future Stars
                 </p>
               </div>
               <div>
-                <p className="text-xs tracking-[3px] uppercase text-brass mb-3">Clients</p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-2 text-sm text-cream/40 font-light">
-                  {[
-                    "Louis Vuitton", "Red Bull", "Cadillac", "Porsche",
-                    "Adidas", "Canada Goose", "Samsung", "Spotify",
-                    "Air Canada", "H&M", "Heineken", "Live Nation",
-                    "Beats by Dre", "Hewlett-Packard", "Soho House",
-                    "TD Bank", "Rogers", "General Motors",
-                    "TIFF", "Pride Toronto", "SickKids Hospital",
-                    "The Four Seasons",
-                  ].map((client) => (
-                    <span key={client}>{client}</span>
-                  ))}
-                </div>
+                <p className="text-xs tracking-[3px] uppercase text-brass mb-2">Clients</p>
+                <p className="text-sm text-cream/40 leading-relaxed font-light">
+                  Louis Vuitton &middot; Red Bull &middot; Cadillac &middot; Porsche &middot; Adidas &middot; Canada Goose &middot; Samsung &middot; Spotify &middot; Beats by Dre &middot; Live Nation &middot; Soho House &middot; TIFF &middot; Heineken &middot; HP &middot; Four Seasons &middot; SickKids
+                </p>
               </div>
               <div>
-                <p className="text-xs tracking-[3px] uppercase text-brass mb-3">Sound</p>
-                <p className="text-base text-cream/50 leading-relaxed font-light">
-                  Open format — R&amp;B, house, hip-hop, disco, soul, top 40. Every set is built for the audience in the room, not a generic formula.
+                <p className="text-xs tracking-[3px] uppercase text-brass mb-2">Sound</p>
+                <p className="text-sm text-cream/50 leading-relaxed font-light">
+                  Open format — R&amp;B, house, hip-hop, disco, soul, top 40. Built for the audience in the room.
                 </p>
               </div>
             </div>
