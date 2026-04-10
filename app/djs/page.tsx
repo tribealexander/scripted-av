@@ -6,6 +6,8 @@ import { TextReveal } from "@/components/unlumen-ui/text-reveal";
 import { Tilt } from "@/components/unlumen-ui/tilt";
 import { Magnetic } from "@/components/unlumen-ui/magnetic";
 import { ProgressiveBlur } from "@/components/unlumen-ui/progressive-blur";
+import { ScrambleText } from "@/components/unlumen-ui/scramble-text";
+import { ShimmeringText } from "@/components/unlumen-ui/shimmering-text";
 import { CountUp } from "@/components/unlumen-ui/count-up";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
@@ -87,8 +89,15 @@ function Intro() {
           duration={0.4}
           className="font-serif text-2xl sm:text-3xl md:text-4xl text-charcoal leading-[1.4] tracking-tight"
         />
-        <p className="mt-12 text-sm text-warm-gray uppercase tracking-[3px]">
-          Feel &mdash; Energy &mdash; Precision
+        <p className="mt-12 text-sm uppercase tracking-[3px]">
+          <ShimmeringText
+            text="Feel — Energy — Precision"
+            duration={3}
+            delay={1}
+            spread={1.5}
+            color="rgba(138, 133, 128, 1)"
+            shimmerColor="rgba(196, 162, 101, 0.8)"
+          />
         </p>
       </div>
     </section>
@@ -124,7 +133,17 @@ function LeadDJ() {
             {/* Gradient overlay with name */}
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent flex items-end p-8">
               <div>
-                <h3 className="font-serif text-4xl sm:text-5xl text-cream tracking-tight">Conor Cutz</h3>
+                <h3 className="font-serif text-4xl sm:text-5xl text-cream tracking-tight">
+                  <ScrambleText
+                    text="Conor Cutz"
+                    scrambleSpeed={50}
+                    scrambledLetterCount={2}
+                    characters="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    className="text-cream"
+                    scrambledClassName="text-brass/50"
+                    delay={500}
+                  />
+                </h3>
                 <p className="text-sm text-brass tracking-[2px] uppercase mt-2">Lead DJ &amp; Creative Director</p>
               </div>
             </div>
