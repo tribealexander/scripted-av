@@ -12,7 +12,7 @@ import { Footer } from "@/components/footer";
 export default function DJs() {
   return (
     <>
-      <Nav />
+      <Nav mode="djs" />
       <main>
         <Hero />
         <Intro />
@@ -184,7 +184,7 @@ function Roster() {
   ];
 
   return (
-    <section className="bg-cream px-6 sm:px-10 py-28 sm:py-40">
+    <section id="roster" className="bg-cream px-6 sm:px-10 py-28 sm:py-40">
       <div className="max-w-6xl mx-auto">
         <p className="text-xs tracking-[3px] uppercase text-warm-gray mb-16 sm:mb-24">Our roster</p>
 
