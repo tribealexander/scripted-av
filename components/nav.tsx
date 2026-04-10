@@ -9,7 +9,7 @@ export function Nav({ mode = "av" }: { mode?: "av" | "djs" }) {
       <a href="/" className="text-sm font-medium tracking-[4px] uppercase text-cream">
         <span className="hidden sm:inline">
           <ScrambleText
-            text="Scripted / AV"
+            text={mode === "av" ? "Scripted / AV" : "Scripted / Talent"}
             scrambleSpeed={40}
             scrambledLetterCount={3}
             characters="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -18,7 +18,7 @@ export function Nav({ mode = "av" }: { mode?: "av" | "djs" }) {
             delay={300}
           />
         </span>
-        <span className="sm:hidden">Scripted / AV</span>
+        <span className="sm:hidden">{mode === "av" ? "Scripted / AV" : "Scripted / Talent"}</span>
       </a>
 
       {/* Pill toggle */}
