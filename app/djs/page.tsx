@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { TextReveal } from "@/components/unlumen-ui/text-reveal";
 import { Tilt } from "@/components/unlumen-ui/tilt";
 import { Magnetic } from "@/components/unlumen-ui/magnetic";
+import { ProgressiveBlur } from "@/components/unlumen-ui/progressive-blur";
 import { CountUp } from "@/components/unlumen-ui/count-up";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
@@ -62,6 +63,14 @@ function Hero() {
           </Magnetic>
         </div>
       </div>
+
+      <ProgressiveBlur
+        side="bottom"
+        strength={3}
+        size="80px"
+        tint={false}
+        style={{ background: `linear-gradient(to top, #f5f0e8 0%, transparent 100%)` }}
+      />
     </section>
   );
 }
