@@ -199,7 +199,7 @@ function Roster() {
   ];
 
   return (
-    <section id="roster" className="bg-cream px-6 sm:px-10 py-28 sm:py-40">
+    <section id="roster" className="bg-cream px-6 sm:px-10 py-20 sm:py-28">
       <div className="max-w-5xl mx-auto">
         <p className="text-xs tracking-[3px] uppercase text-warm-gray mb-16 sm:mb-24">Our roster</p>
 
@@ -268,9 +268,9 @@ function WhatYouGet() {
   ];
 
   return (
-    <section className="bg-cream px-6 sm:px-10 py-28 sm:py-40">
+    <section className="bg-cream px-6 sm:px-10 py-20 sm:py-28">
       <div className="max-w-5xl mx-auto">
-        <p className="text-xs tracking-[3px] uppercase text-warm-gray mb-16 sm:mb-24">What you get</p>
+        <p className="text-xs tracking-[3px] uppercase text-warm-gray mb-12 sm:mb-16">What you get</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-20">
           {items.map((step) => (
@@ -339,30 +339,23 @@ function EventTypes() {
   ];
 
   return (
-    <section className="bg-cream px-6 sm:px-10 py-28 sm:py-40">
+    <section className="bg-cream px-6 sm:px-10 py-20 sm:py-28">
       <div className="max-w-6xl mx-auto">
-        <p className="text-xs tracking-[3px] uppercase text-warm-gray mb-16 sm:mb-24">Events we play</p>
+        <p className="text-xs tracking-[3px] uppercase text-warm-gray mb-12 sm:mb-16">Events we play</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="space-y-0">
           {events.map((event) => (
-            <Tilt
+            <div
               key={event.title}
-              rotationFactor={4}
-              springOptions={{ stiffness: 200, damping: 25 }}
+              className="group grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 md:gap-16 py-8 sm:py-10 border-t border-charcoal/10 last:border-b transition-colors duration-300 hover:border-charcoal/20"
             >
-              <div className="bg-charcoal rounded-sm p-8 sm:p-10 h-full relative overflow-hidden">
-                {/* Film grain texture */}
-                <div
-                  className="absolute inset-0 opacity-15 mix-blend-overlay pointer-events-none"
-                  style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E")`,
-                    backgroundSize: "128px 128px",
-                  }}
-                />
-                <h3 className="font-serif text-2xl sm:text-3xl text-cream tracking-tight mb-4 relative">{event.title}</h3>
-                <p className="text-sm text-cream/40 leading-relaxed font-light relative">{event.description}</p>
-              </div>
-            </Tilt>
+              <h3 className="font-serif text-2xl sm:text-3xl text-charcoal tracking-tight group-hover:text-brass transition-colors duration-300">
+                {event.title}
+              </h3>
+              <p className="text-base text-warm-gray leading-relaxed font-light max-w-xl">
+                {event.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>
